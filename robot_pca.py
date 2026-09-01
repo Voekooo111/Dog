@@ -60,18 +60,18 @@ class Robot_pca(Pca):
         ВНИМАНИЕ!!! РАБОТАЕТ ТОЛЬКО ДЛЯ НАЗВАНИЙ ПО УМОЛЧАНИЮ.
         """
         mapping: dict[str, int] = {
-            "r_forward_low": 1,
-            "r_forward_middle" : 1,
+            "r_forward_low": -1,
+            "r_forward_middle" : -1,
             "r_forward_high" : 1,
             "l_forward_low": 1,
             "l_forward_middle" : 1,
-            "l_forward_high" : 1,
-            "r_back_low": 1,
-            "r_back_middle" : 1,
+            "l_forward_high" : -1,
+            "r_back_low": -1,
+            "r_back_middle" : -1,
             "r_back_high" : 1,
             "l_back_low": 1,
             "l_back_middle" : 1,
-            "l_back_high" : 1,
+            "l_back_high" : -1,
         }
         return mapping.get(self.channal_to_body.get(channal))
     
