@@ -139,14 +139,15 @@ class Robot_pca(Pca):
                     self.servo_run(list(self.body.values())[i], 1500)
                     time.sleep(0.2)
 
+                print("Для сохранения значения напишите -1")
                 for i in range(self.count_servo):
-                    value = input("Середина сервопривода(мс). Для сохранения (-1).  ")
+                    value = input(f"Середина сервопривода(мс) {list(self.body.keys())[i]}: ")
                     while value != '-1':
                         try:
                             value = int(value)
                             self.servo_run(list(self.body.values())[i], value)
                             self.centers[i] = value
-                            value = input("Середина сервопривода(мс). Для сохранения (-1).  ")
+                            value = input(f"Середина сервопривода(мс) {list(self.body.keys())[i]}: ")
                         except (ValueError, TypeError):
                             print('Введите число')
                             
