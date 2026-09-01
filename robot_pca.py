@@ -1,4 +1,4 @@
-from .pca9685 import Pca
+from pca9685 import Pca
 import csv
 import lgpio
 import time
