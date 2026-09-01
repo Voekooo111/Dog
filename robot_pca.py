@@ -30,7 +30,7 @@ class Robot_pca(Pca):
         Args:
             args - названия тел (Если пустой, используется по умолчанию)
         """
-        if args is None:
+        if args is None or len(args) == 0:
             self.body = {
                 "r_forward_low": None,
                 "r_forward_middle" : None,
